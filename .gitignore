@@ -9,10 +9,7 @@
 [Bb]in/
 [Obj]/
 [Log]/
-# Ignore build and migration folders
-Migrations/
-obj/
-bin/
+
 
 
 ## Rider and VS Code workspace folders
