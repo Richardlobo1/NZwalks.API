@@ -163,3 +163,4 @@ C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\refint\N
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.pdb
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.genruntimeconfig.cache
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\ref\NZwalks.API.dll
+C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.sourcelink.json
