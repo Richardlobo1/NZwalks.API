@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using NZwalks.API.Data;
+using NZwalks.API.Mappings;
+using NZwalks.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +15,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<NZWalksDbContext>(options =>
     options.UseSqlServer(builder.Configuration["NZwalksConnectionStrings"])
 );
-
+builder.Services.AddScoped<IRegionRepositotory, SQLRegionRepository>();
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<AutoMapperProfiles>());
 
 var app = builder.Build();
 

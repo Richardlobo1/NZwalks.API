@@ -63,6 +63,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "NZwalks.API.Controllers.RegionsController",
+    "Method": "DeleteRegion",
+    "RelativePath": "api/Regions/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NZwalks.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

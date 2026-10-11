@@ -164,3 +164,5 @@ C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.genruntimeconfig.cache
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\ref\NZwalks.API.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.sourcelink.json
+C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll

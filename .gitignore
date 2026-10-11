@@ -35,3 +35,8 @@ packages/
 ## Test results and code coverage
 TestResults/
 *.sequenced
+
+
+bin/
+obj/
+*.cache
