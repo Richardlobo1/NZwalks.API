@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NZwalks.API.CustomActionFilter;
 using NZwalks.API.Data;
 using NZwalks.API.Models.Domain;
 using NZwalks.API.Models.DTO;
@@ -91,6 +92,7 @@ namespace NZwalks.API.Controllers
 
         }
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> AddRegion([FromBody] AddRegionRequestDto addRegionRequestDto)
         {
             //Map DTO to Domain model
@@ -124,6 +126,12 @@ namespace NZwalks.API.Controllers
         [Route("{id:Guid}")]
         public async Task<IActionResult> UpdateRegion([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
+
+            //Validate the request
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
             //checkif region exits
             //var regionDominmodel = await DbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
             //if (regionDominmodel == null)
@@ -145,7 +153,7 @@ namespace NZwalks.API.Controllers
             //});
 
             //by automapper
-            var updatedRegion = mapper.Map<Region>(updateRegionRequestDto);
+            var updatedRegion = mapper.Map<RegionDto>(updateRegionRequestDto);
             updatedRegion = await regionRepositotory.UpdateRegionAsync(id, updatedRegion);
             if (updatedRegion == null)
             {
@@ -159,6 +167,11 @@ namespace NZwalks.API.Controllers
         [Route("{Id:Guid}")]
         public async Task<IActionResult> DeleteRegion([FromRoute] Guid Id)
         {
+            //Validate the request
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             //var region = await DbContext.Regions.FirstOrDefaultAsync(x => x.Id == Id);
             //if (region == null)
             //{

@@ -24,10 +24,12 @@ namespace NZwalks.API.Controllers
             return Ok(mapper.Map<WalkDto>(walkDomianModel));
         }
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
+            [FromQuery] string? sortBy, [FromQuery] bool? isAccending, [FromQuery] int pageNumber = 1,[FromQuery]int pageSize=1000
+            )
         {
 
-            var walksdomianmodel = await iwalkRepository.GetAllAsync();
+            var walksdomianmodel = await iwalkRepository.GetAllAsync(filterOn, filterQuery,sortBy,isAccending,pageNumber,pageSize);
             return Ok(mapper.Map<List<WalkDto>>(walksdomianmodel));
 
         }
@@ -39,11 +41,11 @@ namespace NZwalks.API.Controllers
         {
             var walkdominmodel = await iwalkRepository.GetByIdAsync(Id);
 
-            //if (walkdominmodel == null)
-            //{
-            //    return NotFound();
+            if (walkdominmodel == null)
+            {
+                return NotFound();
 
-            //}
+            }
             return Ok(mapper.Map<WalkDto>(walkdominmodel));
         }
 

@@ -6,6 +6,7 @@ C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\NZwalks.
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\NZwalks.API.runtimeconfig.json
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\NZwalks.API.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\NZwalks.API.pdb
+C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\Humanizer.dll
@@ -56,6 +57,7 @@ C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.C
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Composition.Runtime.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Composition.TypedParts.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Drawing.Common.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Memory.Data.dll
@@ -148,6 +150,7 @@ C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.csproj.CoreCompileInputs.cache
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.sourcelink.json
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -163,6 +166,3 @@ C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\refint\N
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.pdb
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.genruntimeconfig.cache
 C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\ref\NZwalks.API.dll
-C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\obj\Debug\net9.0\NZwalks.API.sourcelink.json
-C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\AutoMapper.dll
-C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll

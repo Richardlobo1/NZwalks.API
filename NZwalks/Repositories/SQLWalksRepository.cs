@@ -20,9 +20,41 @@ namespace NZwalks.API.Repositories
             return walk;
         }
 
-        public async Task<List<Walk>> GetAllAsync()
+        public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null, string? sortBy = null, bool? isAccending = true, int pageNumber = 1, int pageSize = 1000)
         {
-            return await dbContext.Walks.Include(w => w.Region).Include(w => w.Difficulty).ToListAsync();
+            //return await dbContext.Walks.Include(w => w.Region).Include(w => w.Difficulty).ToListAsync();
+            var walks = dbContext.Walks.Include(w => w.Region).Include(w => w.Difficulty).AsQueryable();
+            //Filtering
+            if (string.IsNullOrEmpty(filterOn)==false&&string.IsNullOrEmpty(filterQuery)==false)
+            {
+                if (filterOn.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks=walks.Where(x=>x.Name.Contains(filterQuery));
+                }
+                
+            }
+
+            //sorting
+            if (string.IsNullOrEmpty(sortBy) == false) {
+                if (sortBy.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = (bool)isAccending ? walks.OrderBy(x => x.Name) : walks.OrderByDescending(x => x.Name);
+                }
+                if (sortBy.Equals("Length", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = (bool)isAccending ? walks.OrderBy(x => x.LengthInKm) : walks.OrderByDescending(x => x.LengthInKm);
+                }
+                if (sortBy.Equals("Region", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = (bool)isAccending ? walks.OrderBy(x => x.Region.Name) : walks.OrderByDescending(x => x.Region.Name);
+                }
+            } 
+
+            //Pagination
+
+            var skipResults = (pageNumber - 1) * pageSize;
+           return await walks.Skip(skipResults).Take(pageSize).ToListAsync();
+            //return await walks.ToListAsync();
         }
 
         public async Task<Walk?> GetByIdAsync(Guid id)

@@ -166,6 +166,54 @@
         "tags": [
           "Walks"
         ],
+        "parameters": [
+          {
+            "name": "filterOn",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterQuery",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isAccending",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "pageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1000
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -300,15 +348,20 @@
   "components": {
     "schemas": {
       "AddRegionRequestDto": {
+        "required": [
+          "code",
+          "name"
+        ],
         "type": "object",
         "properties": {
           "code": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 5,
+            "minLength": 2,
+            "type": "string"
           },
           "name": {
-            "type": "string",
-            "nullable": true
+            "minLength": 100,
+            "type": "string"
           },
           "regionImageUrl": {
             "type": "string",
@@ -318,17 +371,28 @@
         "additionalProperties": false
       },
       "AddWalksRequestDto": {
+        "required": [
+          "description",
+          "difficultyID",
+          "lengthInKm",
+          "name",
+          "regionID"
+        ],
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "description": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
           },
           "lengthInKm": {
+            "maximum": 50,
+            "minimum": 0,
             "type": "number",
             "format": "double"
           },
