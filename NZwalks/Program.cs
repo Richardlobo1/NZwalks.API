@@ -8,10 +8,20 @@ using Microsoft.OpenApi.Models;
 using NZwalks.API.Data;
 using NZwalks.API.Mappings;
 using NZwalks.API.Repositories;
+using Serilog;
 using System.Security.Cryptography.Xml;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+var logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("Logs/NZwalks_Logs.txt",rollingInterval:RollingInterval.Minute)
+    .MinimumLevel.Warning()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
+
+
 
 // Add services to the container.
 
@@ -96,6 +106,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<NZwalks.API.Middlewares.ExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
@@ -108,5 +119,4 @@ app.UseStaticFiles(new StaticFileOptions
 });
 
 app.MapControllers();
-
 app.Run();  

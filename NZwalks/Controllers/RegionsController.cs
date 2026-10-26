@@ -8,6 +8,7 @@ using NZwalks.API.Data;
 using NZwalks.API.Models.Domain;
 using NZwalks.API.Models.DTO;
 using NZwalks.API.Repositories;
+using System.Text.Json;
 
 namespace NZwalks.API.Controllers
 {
@@ -18,40 +19,25 @@ namespace NZwalks.API.Controllers
         private readonly NZWalksDbContext DbContext;
         private readonly IRegionRepositotory regionRepositotory;
         private readonly IMapper mapper;
+        private readonly ILogger<RegionsController> logger;
 
-        public RegionsController(NZWalksDbContext DbContext,IRegionRepositotory regionRepositotory,IMapper mapper)
+        public RegionsController(NZWalksDbContext DbContext,IRegionRepositotory regionRepositotory,IMapper mapper,ILogger<RegionsController> logger)
         {
             this.DbContext = DbContext;
             this.regionRepositotory = regionRepositotory;
             this.mapper = mapper;
+            this.logger = logger;
         }
         [HttpGet]
-        [Authorize(Roles ="Reader,Writer")]
+        //[Authorize(Roles ="Reader,Writer")]
 
         public async Task<IActionResult> GetAll()
         {
+            //logger.LogInformation("GetAll Region method  was called");
 
-            //var region = new List<Region>
-            //{
-            //    new Region
-            //    {
-            //        Id=Guid.NewGuid(),
-            //        Name="Asia",
-            //        Code="AS",
-            //        RegionImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4W5se-3sXcI-CuvSm5GbPoSk655stnvqEeWyX1M79KA&s=10"
-
-            //    },
-            //      new Region
-            //    {
-            //        Id=Guid.NewGuid(),
-            //        Name="United State",
-            //        Code="USA",
-            //        RegionImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4W5se-3sXcI-CuvSm5GbPoSk655stnvqEeWyX1M79KA&s=10"
-
-            //    },
-            //};
+          
             //Get data from database- domian model
-            var regions = await regionRepositotory.GetAllAsync(); 
+           // var regions = await regionRepositotory.GetAllAsync(); 
             //Mapm domian model to DTO
                 //var regionDto = new List<RegionDto>();
                 //foreach (var region in regions)
@@ -66,8 +52,25 @@ namespace NZwalks.API.Controllers
                 //    });
                 //}
 
-            var regionDto=mapper.Map<List<RegionDto>>(regions);
-            return Ok(regionDto);
+            //logger.LogInformation($"GetAll Region method  was completed :{JsonSerializer.Serialize(regions)}");
+            //var regionDto=mapper.Map<List<RegionDto>>(regions);
+            //return Ok(regionDto);
+
+            try
+            {
+
+                throw new Exception("This is custom exception");
+                var regions = await regionRepositotory.GetAllAsync();
+                logger.LogInformation($"GetAll Region method  was completed :{JsonSerializer.Serialize(regions)}");
+                var regionDto = mapper.Map<List<RegionDto>>(regions);
+                return Ok(regionDto);
+
+            }
+            catch(Exception ex)
+            {
+                logger.LogError(ex, ex.Message);
+                throw;
+            }
 
         }
         [HttpGet]

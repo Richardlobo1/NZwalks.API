@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using NZwalks.API.Models.Domain;
 using NZwalks.API.Models.DTO;
 using NZwalks.API.Repositories;
+using System.Net;
 
 namespace NZwalks.API.Controllers
 {
@@ -27,11 +28,13 @@ namespace NZwalks.API.Controllers
         public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
             [FromQuery] string? sortBy, [FromQuery] bool? isAccending, [FromQuery] int pageNumber = 1,[FromQuery]int pageSize=1000
             )
-        {
+        {          
 
             var walksdomianmodel = await iwalkRepository.GetAllAsync(filterOn, filterQuery,sortBy,isAccending,pageNumber,pageSize);
+            //
+            throw new Exception("This is a test exception for logging purposes.");
             return Ok(mapper.Map<List<WalkDto>>(walksdomianmodel));
-
+               
         }
 
 
