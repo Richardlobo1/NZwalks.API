@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37027.9 d17.14
+VisualStudioVersion = 17.14.37027.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZwalks.API", "NZwalks\NZwalks.API.csproj", "{5F59F44F-24B3-43D2-B67D-90E0F5C2BD5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NZwalksUI", "NZwalksUI\NZwalksUI.csproj", "{EC3BE417-F9D2-4D88-9E00-F26CAACB4E60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5F59F44F-24B3-43D2-B67D-90E0F5C2BD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F59F44F-24B3-43D2-B67D-90E0F5C2BD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F59F44F-24B3-43D2-B67D-90E0F5C2BD5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3BE417-F9D2-4D88-9E00-F26CAACB4E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3BE417-F9D2-4D88-9E00-F26CAACB4E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3BE417-F9D2-4D88-9E00-F26CAACB4E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3BE417-F9D2-4D88-9E00-F26CAACB4E60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

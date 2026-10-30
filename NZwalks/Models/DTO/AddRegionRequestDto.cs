@@ -10,7 +10,7 @@ namespace NZwalks.API.Models.DTO
         public string Code { get; set; }
 
         [Required]
-        [MinLength(100, ErrorMessage = "Region name must be at least 100 characters long.")]
+        [MinLength(7, ErrorMessage = "Region name must be at least 7 characters long.")]
         public string Name { get; set; }
         public string? RegionImageUrl { get; set; }
     }

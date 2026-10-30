@@ -59,7 +59,7 @@ namespace NZwalks.API.Controllers
             try
             {
 
-                throw new Exception("This is custom exception");
+                //throw new Exception("This is custom exception");
                 var regions = await regionRepositotory.GetAllAsync();
                 logger.LogInformation($"GetAll Region method  was completed :{JsonSerializer.Serialize(regions)}");
                 var regionDto = mapper.Map<List<RegionDto>>(regions);
@@ -75,7 +75,7 @@ namespace NZwalks.API.Controllers
         }
         [HttpGet]
 
-        [Authorize(Roles = "Reader,Writer")]
+        //[Authorize(Roles = "Reader,Writer")]
 
         [Route("{Id:Guid}")]
 
@@ -103,7 +103,7 @@ namespace NZwalks.API.Controllers
         }
         [HttpPost]
         [ValidateModel]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
 
         public async Task<IActionResult> AddRegion([FromBody] AddRegionRequestDto addRegionRequestDto)
         {
@@ -138,7 +138,7 @@ namespace NZwalks.API.Controllers
         
         [HttpPut]
         [Route("{id:Guid}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> UpdateRegion([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
 
@@ -180,7 +180,7 @@ namespace NZwalks.API.Controllers
         //Delete Region
         [HttpDelete]
         [Route("{Id:Guid}")]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
 
         public async Task<IActionResult> DeleteRegion([FromRoute] Guid Id)
         {

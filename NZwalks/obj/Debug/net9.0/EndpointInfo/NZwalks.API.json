@@ -470,7 +470,7 @@
             "type": "string"
           },
           "name": {
-            "minLength": 100,
+            "minLength": 7,
             "type": "string"
           },
           "regionImageUrl": {

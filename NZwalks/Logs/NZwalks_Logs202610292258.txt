@@ -1,0 +1,38 @@
+2026-10-29 22:58:35.003 +05:30 [ERR] This is custom exception
+System.Exception: This is custom exception
+   at NZwalks.API.Controllers.RegionsController.GetAll() in C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\Controllers\RegionsController.cs:line 62
+2026-10-29 22:58:35.121 +05:30 [ERR]  Some error occured with ErrorId: 64ae5a6d-cddd-4421-b227-caf32f54bc62:-This is custom exception
+System.Exception: This is custom exception
+   at NZwalks.API.Controllers.RegionsController.GetAll() in C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\Controllers\RegionsController.cs:line 62
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZwalks.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\Middlewares\ExceptionHandlerMiddleware.cs:line 18
+2026-10-29 22:58:43.192 +05:30 [ERR] This is custom exception
+System.Exception: This is custom exception
+   at NZwalks.API.Controllers.RegionsController.GetAll() in C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\Controllers\RegionsController.cs:line 62
+2026-10-29 22:58:43.282 +05:30 [ERR]  Some error occured with ErrorId: dddf60bf-ba20-44bd-9f76-75766358c194:-This is custom exception
+System.Exception: This is custom exception
+   at NZwalks.API.Controllers.RegionsController.GetAll() in C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\Controllers\RegionsController.cs:line 62
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZwalks.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in C:\Users\Richard Lobo\Documents\C#\NZwalks.API\NZwalks\Middlewares\ExceptionHandlerMiddleware.cs:line 18
